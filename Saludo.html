@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a nuestra página musical</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: #121212;
+            overflow: hidden;
+            text-align: center;
+        }
+        /* Video de fondo */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        /* Contenedor de saludo */
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 20px;
+        }
+        .content h1 {
+            font-size: 2.5em;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+        .content p {
+            font-size: 1.2em;
+            color: #ccc;
+            margin-top: 0;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ffc107;
+        }
+        /* Control del audio */
+        .audio-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video de Fondo -->
+    <video autoplay muted loop class="video-background">
+        <source src="fondo.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+    </video>
+
+    <!-- Contenido principal -->
+    <div class="content">
+        <h1>¡Bienvenido a nuestra página de música!</h1>
+        <p>Ingresa tu nombre para recibir un saludo personalizado:</p>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre aquí">
+        <div class="buttons">
+            <button onclick="saludar()">Enviar</button>
+            <a href="Index.html"><button>Siguiente</button></a>
+        </div>
+        <p id="saludo"></p>
+    </div>
+
+    <!-- Control de Audio -->
+    <div class="audio-control">
+        <audio id="audio" controls autoplay loop>
+            <source src="pag/mp3/saludo.mp3" type="audio/mp3">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </div>
+
+    <script>
+        function saludar() {
+            const nombre = document.getElementById("nombre").value;
+            const saludo = document.getElementById("saludo");
+            if (nombre) {
+                saludo.textContent = `¡Hola, ${nombre}! Gracias por visitarnos.`;
+            } else {
+                saludo.textContent = "Por favor, ingresa tu nombre para recibir el saludo.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Sonido Actual</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Video de fondo */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Fondo del encabezado con el menú */
+        .header {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilos del menú */
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            font-size: 1em;
+            background-color: #333; /* Fondo de cada botón */
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav a:hover {
+            background-color: #ffcc00; /* Cambia color al pasar el cursor */
+            color: #121212;
+        }
+
+        /* Triángulo central (aumentado de tamaño) */
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 170px solid white;
+            margin: 0 auto;
+            position: relative;
+            top: 15px;
+        }
+
+        /* Triángulo interior */
+        .triangle-inner {
+            width: 0;
+            height: 0;
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+            border-bottom: 120px solid #ff0000;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+
+        /* Alas */
+        .wing {
+            position: absolute;
+            top: 30px;
+            width: 200px;
+            height: 100px;
+            background: radial-gradient(circle at 20% 50%, white, transparent 70%);
+        }
+
+        .wing-left {
+            transform: rotate(20deg);
+            left: -220px;
+        }
+
+        .wing-right {
+            transform: rotate(-20deg);
+            right: -220px;
+        }
+
+        /* Texto del logo */
+        .logo-container {
+            margin-top: 100px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-text {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+
+        .logo-subtext {
+            font-size: 1.2em;
+            font-style: italic;
+            margin-bottom: -5px;
+        }
+        /* Control del audio */
+        .audio-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Video de Fondo -->
+    <video autoplay muted loop class="video-background">
+        <source src="fondo.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+    </video>
+
+    <!-- Encabezado con menú -->
+    <header class="header">
+        <nav class="nav">
+            <a href="Index.html">Inicio</a>
+            <a href="pag/Calendario.html">Calendario de Eventos</a>
+            <a href="pag/noticia.html">Noticias de Música</a>
+            <a href="pag/Critica.html">Genero</a>
+            <a href="pag/Contacto.html">Contacto</a>
+            <a href="pag/Quienes_somos.html">Quienes somos</a>
+    </header>
+
+    <!-- Logo central -->
+    <div class="logo-container">
+        <div class="logo-subtext">El</div>
+        <div class="logo-text">SonidoActual</div>
+        <div class="wing wing-left"></div>
+        <div class="wing wing-right"></div>
+        <div class="triangle">
+            <div class="triangle-inner"></div>
+        </div>
+    </div>
+   <!-- Control de Audio -->
+   <div class="audio-control">
+    <audio id="audio" controls autoplay loop>
+        <source src="pag/mp3/saludo.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+</div>
+</body>
+</html>
