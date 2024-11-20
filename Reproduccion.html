@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Reproducción</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Video de fondo */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Estilos de la cabecera */
+        .header {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            font-size: 1em;
+            background-color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            margin: 0 5px;
+        }
+
+        .nav a:hover {
+            background-color: #ffcc00;
+            color: #121212;
+        }
+
+        /* Contenedor de la lista de reproducción */
+        .playlist-container {
+            margin-top: 80px;
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(26, 26, 26, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+        }
+
+        .playlist-title {
+            font-size: 2em;
+            color: #ffcc00;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Estilo de cada canción */
+        .track {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background-color: #282828;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .track:hover {
+            background-color: #333;
+        }
+
+        .track img {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        .track-info {
+            flex: 1;
+        }
+
+        .track-info h3 {
+            font-size: 1.1em;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .track-info p {
+            font-size: 0.9em;
+            color: #cccccc;
+            margin: 2px 0;
+        }
+
+        .track audio {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video de Fondo -->
+    <video autoplay muted loop class="video-background">
+        <source src="../fondo.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+    </video>
+
+    <!-- Cabecera con el menú de navegación -->
+    <header class="header">
+        <nav class="nav">
+            <a href="../index.html">Inicio</a>
+            <a href="calendario.html">Calendario de Eventos</a>
+            <a href="noticias.html">Noticias de Música</a>
+            <a href="Critica.html">Generos</a>
+            <a href="Reproduccion.html">Listas de Reproducción</a>
+            <a href="Contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Contenedor de la lista de reproducción -->
+    <div class="playlist-container">
+        <div class="playlist-title">Lista de Reproducción</div>
+
+        <!-- Canción de Pop -->
+        <div class="track">
+            <img src="pop.jpg" alt="Pop Song">
+            <div class="track-info">
+                <h3>Levitating</h3>
+                <p>Dua Lipa</p>
+                <p>Género: Pop</p>
+            </div>
+            <audio controls>
+                <source src="pop_song.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+
+        <!-- Canción de Rock -->
+        <div class="track">
+            <img src="rock.jpg" alt="Rock Song">
+            <div class="track-info">
+                <h3>Smells Like Teen Spirit</h3>
+                <p>Nirvana</p>
+                <p>Género: Rock</p>
+            </div>
+            <audio controls>
+                <source src="rock_song.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+
+        <!-- Canción de Rap -->
+        <div class="track">
+            <img src="rap.jpg" alt="Rap Song">
+            <div class="track-info">
+                <h3>SICKO MODE</h3>
+                <p>Travis Scott</p>
+                <p>Género: Rap</p>
+            </div>
+            <audio controls>
+                <source src="rap_song.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+
+        <!-- Canción de Reguetón -->
+        <div class="track">
+            <img src="regueton.jpg" alt="Reguetón Song">
+            <div class="track-info">
+                <h3>Callaíta</h3>
+                <p>Bad Bunny</p>
+                <p>Género: Reguetón</p>
+            </div>
+            <audio controls>
+                <source src="regueton_song.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+
+        <!-- Canción de Trap -->
+        <div class="track">
+            <img src="trap.jpg" alt="Trap Song">
+            <div class="track-info">
+                <h3>BEBE</h3>
+                <p>6ix9ine & Anuel AA</p>
+                <p>Género: Trap</p>
+            </div>
+            <audio controls>
+                <source src="trap_song.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+
+        <!-- Canción de Dembow -->
+        <div class="track">
+            <img src="dembow.jpg" alt="Dembow Song">
+            <div class="track-info">
+                <h3>La Mamá de la Mamá</h3>
+                <p>El Alfa</p>
+                <p>Género: Dembow</p>
+            </div>
+            <audio controls>
+                <source src="dembow_song.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+
+        <!-- Canción de Bachata -->
+        <div class="track">
+            <img src="bachata.jpg" alt="Bachata Song">
+            <div class="track-info">
+                <h3>Propuesta Indecente</h3>
+                <p>Romeo Santos</p>
+                <p>Género: Bachata</p>
+            </div>
+            <audio controls>
+                <source src="bachata_song.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+
+        <!-- Canción de Salsa -->
+        <div class="track">
+            <img src="salsa.jpg" alt="Salsa Song">
+            <div class="track-info">
+                <h3>Vivir Mi Vida</h3>
+                <p>Marc Anthony</p>
+                <p>Género: Salsa</p>
+            </div>
+            <audio controls>
+                <source src="salsa_song.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+
+        <!-- Canción de Jazz -->
+        <div class="track">
+            <img src="jazz.jpg" alt="Jazz Song">
+            <div class="track-info">
+                <h3>Take Five</h3>
+                <p>Dave Brubeck</p>
+                <p>Género: Jazz</p>
+            </div>
+            <audio controls>
+                <source src="jazz_song.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+    </div>
+
+</body>
+</html>

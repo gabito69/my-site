@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizaciones de la Música</title>
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+   
+        /* Encabezado de navegación */
+        .nav-header {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilos del menú */
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            font-size: 1em;
+            background-color: #333; /* Fondo de cada botón */
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav a:hover {
+            background-color: #ffcc00; /* Cambia color al pasar el cursor */
+            color: #121212;
+        }
+
+        /* Encabezado principal de la página */
+        .page-header {
+            text-align: center;
+            margin-top: 80px; /* Ajustado para dar espacio al menú fijo */
+            margin-bottom: 30px;
+        }
+
+        .page-header h1 {
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            color: #f0f0f0;
+            margin: 0;
+        }
+
+        /* Icono debajo del título */
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 25px solid #f0f0f0;
+            margin: 10px auto;
+        }
+
+        /* Contenedor de noticias con cuadrícula */
+        .news-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        /* Caja de cada noticia */
+        .news-item {
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            border: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .news-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .news-item-content {
+            padding: 15px;
+        }
+
+        .news-item h2 {
+            font-size: 1.2em;
+            color: #ffcc00;
+            margin: 10px 0;
+            letter-spacing: 1px;
+        }
+
+        .news-item p {
+            font-size: 0.9em;
+            color: #ccc;
+            line-height: 1.4em;
+            margin: 10px 0;
+        }
+
+        .news-item a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+  
+  <!-- Encabezado de navegación -->
+  <header class="nav-header">
+    <nav class="nav">
+        <a href="../index.html">Inicio</a>
+        <a href="calendario.html">Calendario de Eventos</a>
+        <a href="noticias.html">Noticias de Música</a>
+        <a href="Critica.html">Generos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+    <!-- Encabezado principal de la página -->
+    <div class="page-header">
+        <h1>ACTUALIZACIONES DE LA MÚSICA</h1>
+        <div class="triangle"></div>
+    </div>
+
+    <!-- Sección de noticias -->
+    <div class="news-section">
+        <!-- Noticia 1 -->
+        <div class="news-item">
+            <img src="IMG/Myke.jpg" alt="La Pantera Negra">
+            <div class="news-item-content">
+                <h2>La Pantera Negra</h2>
+                <p>Myke Towers lanza su sexto proyecto discográfico, "La Pantera Negra". <a href="https://www.radiok1.com/post/myke-towers-presenta-su-nuevo-%C3%A1lbum-la-pantera-negra">Leer más</a></p>
+            </div>
+        </div>
+
+        <!-- Noticia 2 -->
+        <div class="news-item">
+            <img src="IMG/Quincy.jpg" alt="Quincy Jones">
+            <div class="news-item-content">
+                <h2>Fallecimiento de Quincy Jones</h2>
+                <p>El legendario productor musical Quincy Jones falleció a los 91 años. <a href="https://www.bbc.com/mundo/articles/crmzkn8wjneo">Leer más</a></p>
+            </div>
+        </div>
+
+        <!-- Noticia 3 -->
+        <div class="news-item">
+            <img src="IMG/madrid.jpg" alt="Madrid Capital de Música Latina">
+            <div class="news-item-content">
+                <h2>Madrid, nueva capital de la música latina</h2>
+                <p>Madrid se convierte en el centro neurálgico de la música latina en Europa. <a href="https://elpais.com/espana/madrid/2024-11-03/miami-lo-confirmo-madrid-capital-europea-de-la-musica-latina.html">Leer más</a></p>
+            </div>
+        </div>
+
+        <!-- Noticia 4 -->
+        <div class="news-item">
+            <img src="IMG/lenny.jpg" alt="Lenny Kravitz Gira">
+            <div class="news-item-content">
+                <h2>Gira europea de Lenny Kravitz</h2>
+                <p>Lenny Kravitz anuncia su gira europea, con paradas en España. <a href="https://efeeme.com/lenny-kravitz-de-gira-por-espana/">Leer más</a></p>
+            </div>
+        </div>
+
+        <!-- Noticia 5 -->
+        <div class="news-item">
+            <img src="IMG/joan.jpg" alt="Joan Manuel Serrat">
+            <div class="news-item-content">
+                <h2>Reconocimiento a Joan Manuel Serrat</h2>
+                <p>Serrat recibe el premio de Cultura de la Asociación de Corresponsales. <a href="https://www.infobae.com/cultura/2024/11/07/joan-manuel-serrat-recibio-el-doctorado-honoris-causa-de-una-importante-universidad-mexicana/">Leer más</a></p>
+            </div>
+        </div>
+   
+    <div class="news-item">
+        <img src="IMG/lenny3.jpg" alt="Lenny Kravitz Gira">
+        <div class="news-item-content">
+            <h2>Romeo Santos</h2>
+            <p>Romeo Santos y el grupo Aventura han anunciado su gira de despedida "Cerrando Ciclos", la cual culminará con dos conciertos en el Estadio Olímpico Félix Sánchez de Santo Domingo, República Dominicana.<a href="https://ticketexpress.com.do/ShowEvent.aspx?ID=1013">Leer más</a></p>
+        </div>
+    </div>
+    <div class="news-item">
+        <img src="IMG/lenny2.jpg" alt="Lenny Kravitz Gira">
+        <div class="news-item-content">
+            <h2>Carlos Vives </h2>
+            <p>En una reciente entrevista, el cantante colombiano <a href="https://www.diariolasamericas.com/cultura/carlos-vives-nuestra-musica-unio-una-comunidad-n5366475">Leer más</a></p>
+        </div>
+    </div>
+    <div class="news-item">
+        <img src="IMG/santa.jpg" alt="Lenny Kravitz Gira">
+        <div class="news-item-content">
+            <h2>Gilberto Santa Rosa </h2>
+            <p>El pasado 8 de noviembre, el "Caballero de la Salsa" fue galardonado por el Instituto de Cultura Puertorriqueña. <a href="https://elnacional.com.do/reconocen-a-gilberto-santa-rosa-como-embajador-de-la-musica-puertorriquena-en-el-mundo/#:~:text=%2D%20El%20Instituto%20de%20Cultura%20Puertorrique%C3%B1a,esta%20identidad%20musical%20y%20cultural.">Leer más</a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualización Musical</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Video de fondo */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Estilo del contenido */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+        }
+
+        /* Estilos del menú */
+        .header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+            text-align: center;
+            padding: 15px 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .nav a {
+            color: #CCCCCC; /* Gris claro */
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav a:hover {
+            background-color: #CCCCCC;
+            color: #333;
+        }
+
+        /* Estilo del contenido principal */
+        .content {
+            position: relative;
+            max-width: 800px;
+            padding: 2em;
+            background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+            text-align: center;
+            margin-top: 100px; /* Espacio para evitar el menú fijo */
+        }
+
+        .content h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            color: #CCCCCC; /* Gris claro */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    
+        h2 {
+            font-size: 2em;
+            margin: 1em 0;
+            color: #CCCCCC; /* Gris claro */
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 1.5em;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin-top: 1em;
+        }
+
+        ul li {
+            font-size: 1.2em;
+            line-height: 1.6;
+            padding-left: 1em;
+            position: relative;
+            color: #CCCCCC; /* Gris claro */
+        }
+
+        ul li::before {
+            content: "•";
+            color: #CCCCCC; /* Gris claro */
+            position: absolute;
+            left: 0;
+            font-size: 1.5em;
+            line-height: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor del video de fondo -->
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="../fondo.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    </div>
+
+    <!-- Menú de navegación fijo en la parte superior -->
+    <header class="header">
+        <nav class="nav">
+            <a href="../index.html">Inicio</a>
+            <a href="Calendario.html">Calendario de Eventos</a>
+            <a href="noticia.html">Noticias de Música</a>
+            <a href="Critica.html">Géneros</a>
+            <a href="Contacto.html">Contacto</a>        
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="content">
+        <h1>Actualización Musical</h1>
+        
+        <section id="mision">
+            <h2>Misión</h2>
+            <p>Nuestra misión es conectar a las personas con el vibrante mundo de la música, ofreciendo actualizaciones diarias y contenido exclusivo que celebre cada género y artista. Queremos ser el puente entre los fanáticos y su pasión musical, brindando información precisa y de calidad.</p>
+        </section>
+
+        <section id="vision">
+            <h2>Visión</h2>
+            <p>Ser la plataforma líder en actualizaciones musicales para todos los géneros, logrando que cada usuario encuentre en nuestra página el ritmo perfecto para su vida. Nos vemos como una comunidad global donde la música es el idioma común.</p>
+        </section>
+
+        <section id="valores">
+            <h2>Valores</h2>
+            <ul>
+                <li><strong>Pasión por la música:</strong> Nos mueve el amor por la música en todas sus formas.</li>
+                <li><strong>Inclusividad:</strong> Promovemos el respeto y la diversidad de géneros y culturas musicales.</li>
+                <li><strong>Innovación:</strong> Usamos tecnología y creatividad para ofrecer una experiencia única.</li>
+                <li><strong>Confiabilidad:</strong> Comprometidos con la veracidad de la información.</li>
+                <li><strong>Conexión:</strong> Fomentamos la comunidad y el diálogo entre los fanáticos de la música.</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
